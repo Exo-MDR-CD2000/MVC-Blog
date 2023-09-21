@@ -1,0 +1,17 @@
+[
+    {
+        "text": "Great post! Thanks for sharing.",
+        "userId": 1,
+        "postId": 1
+      },
+      {
+        "text": "I found this post really helpful. Keep up the good work!",
+        "userId": 2,
+        "postId": 1
+      },
+      {
+        "text": "I have a question about this post. Can you explain this part in more detail?",
+        "userId": 3,
+        "postId": 2
+      }
+]
