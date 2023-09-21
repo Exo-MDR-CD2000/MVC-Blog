@@ -22,7 +22,7 @@ Posts.init(
     created_at: {
       type: DataTypes.DATE,
       allowNull: false,
-      defaultValue: DataTypes.NOW, // the defaultvalue is set to the current date and time
+      defaultValue: DataTypes.NOW, // the default value is set to the current date and time
     },
     updated_at: {
       type: DataTypes.DATE,
