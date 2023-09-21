@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Understanding the Model-View-Controller (MVC) Architecture",
+    "content": "The Model-View-Controller (MVC) architecture is a popular design pattern used in web development. In this post, we'll explain what the MVC architecture is, how it works, and why it's important for building scalable and maintainable web applications.",
+    "user_id": 1
+  },
+  {
+    "title": "Creating Models in Node.js with Sequelize",
+    "content": "Models are a key component of the Model-View-Controller (MVC) architecture. In this post, we'll show you how to create models in Node.js using Sequelize, a popular Object-Relational Mapping (ORM) library.",
+    "user_id": 2
+  },
+  {
+    "title": "Building Views in React with JSX",
+    "content": "Views are another key component of the Model-View-Controller (MVC) architecture. In this post, we'll show you how to build views in React using JSX, a syntax extension for JavaScript that allows you to write HTML-like code in your JavaScript files.",
+    "user_id": 3
+  },
+  {
+    "title": "Handling User Input in Express with Controllers",
+    "content": "Controllers are the glue that binds the models and views together in the Model-View-Controller (MVC) architecture. In this post, we'll show you how to handle user input in Express using controllers, and how to keep your code organized and maintainable.",
+    "user_id": 4
+  },
+  {
+    "title": "How do I create handlebar templates?",
+    "content": "Handlebars are a popular templating language for JavasScript. You use them to create HTML templates that can be rendered on the server or client side. In this post, we'll show you how to create handlebar templates in Node.js using Express and Handlebars.",
+    "user_id": 5
+  }
+]
