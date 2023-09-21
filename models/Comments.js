@@ -20,7 +20,7 @@ Comments.init(
       allowNull: false,
       defaultValue: DataTypes.NOW, // the default value is set to the current date and time
     },
-    userId: {
+    user_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
@@ -28,7 +28,7 @@ Comments.init(
         key: "id",
       },
     },
-    postId: {
+    post_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
