@@ -1,6 +1,35 @@
-const router = require('express').Router();
-const { User, Posts, Comments } = require('../../models');
-const withAuth = require('../../utils/auth');  // auth needed for routes that require authentication
+const router = require("express").Router();
+const { User, Posts, Comments } = require("../../models");
+const withAuth = require("../../utils/auth"); // auth needed for routes that require authentication
 
 // GET all posts
 
+router.get("/", withAuth, async (req, res) => {
+  try {
+    const postsData = await Posts.findAll({
+      include: [{ model: User }, { model: Comments }],
+    });
+    res.status(200).json(postsData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+// GET a single post by id
+
+router.get("/:id", withAuth, async (req, res) => {
+  try {
+    const postData = await Posts.findByPk(req.params.id, {
+      include: [{ model: User }, { model: Comments }],
+    });
+    if (!postData) {
+      res.status(404).json({ message: "No post found with that id!" });
+      return;
+    }
+    res.status(200).json(postData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+// POST create a new post
