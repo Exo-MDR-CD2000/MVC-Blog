@@ -30,6 +30,25 @@ router.get('/login', (req, res) => {
 });
 
 
+// not sure if this will even work
+
+router.get('/profile', withAuth, async (req, res) => {
+  try {
+    const userData = await User.findByPk(req.session.user_id, {
+      attributes: { exclude: ['password'] },
+    });
+
+    const user = userData.get({ plain: true });
+
+    res.render('profile', {
+      ...user,
+      logged_in: true,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 // this is the signup route
 
 router.get('/signup', (req, res) => {
