@@ -67,3 +67,5 @@ const seedDatabase = async () => {
 };
 
 seedDatabase();
+
+// mysql shell looks fine when viewing the tables. passwords are hashed and not visible. Maybe I don't need top use for loops or math.floor
