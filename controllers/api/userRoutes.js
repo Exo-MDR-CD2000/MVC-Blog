@@ -50,7 +50,7 @@ router.get('/', async (req, res) => {
   try {
     const userData = await User.findAll({
       attributes: ['id', 'username', 'email', 'password'],
-      order: [['id', 'ASC']]
+      order: [['username', 'ASC']] // originally was order: [['id', 'ASC']]
     });
       res.status(200).json(userData);
     } catch (err) {
@@ -95,3 +95,10 @@ router.get('/:id', async (req, res) => {
     });
 
 module.exports = router;
+
+
+//TODO: I am getting a sequelize error when logging into an existing user account
+// I get: "Unknown column 'user.name' in 'order clause'"
+// I was able to create the signup handlebar and js functionality, but I am not able to login
+// I did double check the user model but nothing seems to be wrong with it
+// I think I will develop the homepage handlebar and then come back to this later.

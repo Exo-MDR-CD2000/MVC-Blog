@@ -6,7 +6,7 @@ router.get('/', withAuth, async (req, res) => {
   try {
     const userData = await User.findAll({
       attributes: { exclude: ['password'] },
-      order: [['name', 'ASC']],
+      order: [['username', 'ASC']], // IT WAS THIS LINE!!! It was "name" instead of "username"
     });
 
     const users = userData.map((project) => project.get({ plain: true }));
