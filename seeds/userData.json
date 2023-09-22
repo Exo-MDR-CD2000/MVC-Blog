@@ -1,26 +1,26 @@
 [
     {
-        "name": "Sara",
+        "username": "Sara",
         "email": "sara56@gmail.com",
         "password": "pass123789#"
     },
     {
-        "name": "Jack",
+        "username": "Jack",
         "email": "jack56@yahoo.com",
         "password": "pass123789#"
     },
     {
-        "name": "Collin",
+        "username": "Collin",
         "email": "collin56@protonmail.com",
         "password": "pass123789#"
     },
     {
-        "name": "Brett",
+        "username": "Brett",
         "email": "brett56@outlook.com",
         "password": "pass123789#"
     },
     {
-        "name": "Sam",
+        "username": "Sam",
         "email": "sam56@gmail.com",
         "password": "pass123789#"
     }
