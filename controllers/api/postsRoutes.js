@@ -15,6 +15,8 @@ router.get("/", withAuth, async (req, res) => {
   }
 });
 
+// to get all posts, it would be: localhost:3001/api/posts
+
 // GET a single post by id
 
 router.get("/:id", withAuth, async (req, res) => {
@@ -36,6 +38,7 @@ router.get("/:id", withAuth, async (req, res) => {
 
 router.post("/", withAuth, async (req, res) => {
   try {
+    console.log("user id", req.session.user_id);
     const newPost = await Posts.create({
       ...req.body,
       // if spread operator doesn't work, try this:
@@ -48,6 +51,14 @@ router.post("/", withAuth, async (req, res) => {
     res.status(400).json(err);
   }
 });
+
+//in insomnia, to create a new post, it would be: localhost:3001/api/posts
+// in the body, it would be:
+// {
+//   "title": "title",
+//   "content": "content"
+//   "user_id": (to be filled in by the user)
+// }
 
 // PUT update a post by id
 
@@ -71,9 +82,17 @@ router.put("/:id", withAuth, async (req, res) => {
     }
     res.status(200).json(postData);
   } catch (err) {
+    console.log(err);
     res.status(500).json(err);
   }
 });
+
+// in insomnia, to update a post, it would be: localhost:3001/api/posts/1
+// in the body, it would be:
+// {
+//   "title": "title",
+//   "content": "content"
+// }
 
 // DELETE a post by id
 
