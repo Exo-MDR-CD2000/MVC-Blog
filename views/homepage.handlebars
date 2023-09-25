@@ -1,0 +1,34 @@
+<h2>You are now logged in. Now display the posts and comments here.</h2>
+
+
+
+{{!-- {{#each posts}}
+  <div class="post">
+    <h2>{{title}}</h2>
+    <p>{{content}}</p>
+    <ul>
+      {{#each comments}}
+        <li>{{text}}</li>
+      {{/each}}
+    </ul>
+  </div>
+{{/each}} --}}
+
+
+{{#each posts}}
+  <div class="card mb-3">
+    <div class="card-body">
+      <h5 class="card-title">{{title}}</h5>
+      <p class="card-text">{{content}}</p>
+      <p class="card-text"><small class="text-muted">Posted by {{user.username}} on {{formatDate ../updated_at}}</small></p>
+    </div>
+    <ul class="list-group list-group-flush">
+      {{#each comments}}
+        <li class="list-group-item">
+          <p>{{text}}</p>
+          <p><small class="text-muted">Commented by {{user.username}} on {{formatDate ../created_at}}</small></p>
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+{{/each}}

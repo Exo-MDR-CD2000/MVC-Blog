@@ -45,7 +45,7 @@ router.post('/logout', (req, res) => {
   }
 });
 
-
+// comment out this route after testing
 router.get('/', async (req, res) => {
   try {
     const userData = await User.findAll({
@@ -58,7 +58,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-
+// comment out this route after testing
 router.post('/', async (req, res) => {
   try {
     //const { username, email, password } = req.body;
