@@ -1,100 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tech Blog</title>
-  <link rel="stylesheet" href="/css/jass.css">
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Blog</title>
+    <link rel="stylesheet" href="/css/jass.css">
+  </head>
 
-<body>
-  <header class="display-flex justify-space-between align-center p-2">
-    <h1>
-      Tech Blog
-    </h1>
+  <body>
+    <header class="display-flex justify-space-between align-center p-2">
+      <h1>
+        Tech Blog
+      </h1>
+      {{#if logged_in}}
+      <nav>
+        <a href="/">
+        <button class="btn" id="home">home</button>
+        </a>
+        <a href="/account">
+          <button class="btn" id="account">account</button>
+        </a>
+        <a href="/logout">
+        <button class="btn" id="logout">logout</button>
+        </a>
+      </nav>
+      {{else}}
+      <nav>
+        <a href="/">
+        <button class="btn" id="home">home</button>
+        </a>
+        <a href="/login">
+        <button class="btn" id="login">login</button>
+        </a>
+        <a href="/signup">
+        <button class="btn" id="signup">signup</button>
+        </a>
+      </nav>
+      {{/if}}
+    </header>
+    <main class="container container-fluid mt-5">
+      {{{ body }}}
+    </main>
+    <footer>
+
+    </footer>
+
     {{#if logged_in}}
-    <nav>
-      <button class="btn" id="logout">logout</button>
-      <a href="/account">
-  <button class="btn" id="account">account</button>
-</a>
-    </nav>
-    {{else}}
-    <nav>
-      <a href="/">home</a>
-      <a href="/login">login</a>
-      <a href="/signup">signup</a>
-    </nav>
+    <script src="/js/logout.js"></script>
     {{/if}}
-  </header>
-  <main class="container container-fluid mt-5">
-    {{{ body }}}
-  </main>
-  <footer>
-      
-  </footer>
+  </body>
 
-  {{#if logged_in}}
-  <script src="/js/logout.js"></script>
-  {{/if}}
-</body>
+  {{!-- <body>
+    <header class="display-flex justify-space-between align-center p-2">
+      <h1>
+        Tech Blog
+      </h1>
+      {{#if logged_in}}
+      <nav>
+        <button class="btn" id="logout">logout</button>
+      </nav>
+      {{/if}}
+    </header>
+    <main class="container container-fluid mt-5">
+      {{{ body }}}
+    </main>
+    <footer>
 
+    </footer>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-{{!-- <body>
-  <header class="display-flex justify-space-between align-center p-2">
-    <h1>
-      Tech Blog
-    </h1>
     {{#if logged_in}}
-    <nav>
-      <button class="btn" id="logout">logout</button>
-    </nav>
+    <script src="/js/logout.js"></script>
     {{/if}}
-  </header>
-  <main class="container container-fluid mt-5">
-    {{{ body }}}
-  </main>
-  <footer>
-      
-  </footer>
-
-  {{#if logged_in}}
-  <script src="/js/logout.js"></script>
-  {{/if}}
-</body> --}}
+  </body> --}}
 
 </html>
-
-
-
 
 {{!-- delete later and add boilerplate --}}
