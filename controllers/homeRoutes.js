@@ -60,7 +60,7 @@ router.get('/login', (req, res) => {
 
 // not sure if this will even work
 
-router.get('/profile', withAuth, async (req, res) => {
+router.get('/account', withAuth, async (req, res) => {
   try {
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
@@ -68,7 +68,7 @@ router.get('/profile', withAuth, async (req, res) => {
 
     const user = userData.get({ plain: true });
 
-    res.render('profile', {
+    res.render('account', {
       ...user,
       logged_in: true,
     });
