@@ -26,7 +26,7 @@ newPostForm.addEventListener("submit", async (event) => {
   }
 });
 
-// Edit post form handler
+// // Edit post form handler
 // const editPostFormHandler = async (event) => {
 //     event.preventDefault();
 //     const title = document.querySelector("#edit-post-title").value.trim();
