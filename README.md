@@ -9,7 +9,7 @@ No need to install anything. Go to: [Heroku](https://pure-depths-01409-8304d9d8e
 
 ## Usage
 
-Create an account by clicking on the "signup" button. After that is done, you can create an account, create a new post, delete exisitng posts, and add comments to exisiting posts.
+Create an account by clicking on the "signup" button. After that is done, you can create an account, create a new post, delete exisitng posts, and add comments to exisiting posts. Click the "account" button to create a new post. Deleting exisiting posts is working but editing exisiting posts is not currently.
 
 ## Credits
 
