@@ -58,7 +58,7 @@ router.get('/login', (req, res) => {
 });
 
 
-// not sure if this will even work
+// TODO: this route needs to be modified to show the user's posts
 
 router.get('/account', withAuth, async (req, res) => {
   try {
@@ -68,8 +68,17 @@ router.get('/account', withAuth, async (req, res) => {
 
     const user = userData.get({ plain: true });
 
+    const postData = await Posts.findAll({
+      where: { user_id: req.session.user_id },
+      include: [{ model: User }, { model: Comments, include: [User] }],
+      order: [['id', 'ASC']],
+    });
+
+    const posts = postData.map((post) => post.get({ plain: true }));
+
     res.render('account', {
       ...user,
+      posts,
       logged_in: true,
     });
   } catch (err) {
